@@ -13,10 +13,10 @@ makeCacheMatrix <- function(x = matrix()) {     ## pass in a matrix
     x <<- y
     inv <<- NULL
   }
-  get <- function() x
-  setinv <- function(solve) inv <<- solve
-  getinv <- function() inv
-  list(set = set, get = get,
+  get <- function() x						    ## define get function for matrix
+  setinv <- function(solve) inv <<- solve       ## define set inverse of matrix function
+  getinv <- function() inv                      ## define get inverse of matrix function
+  list(set = set, get = get,                    ## return a list of functions for subsequent call
        setinv = setinv,
        getinv = getinv)
   
